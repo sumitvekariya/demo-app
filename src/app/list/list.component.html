@@ -2,8 +2,8 @@
 
   <div class="card" style="width: 20rem;">
     <div class="card-block">
-      <h2 class="card-title">{{ points }}</h2>
-      <h3 class="card-text">{{ element.title }}</h3>
+      <h2 class="card-title">{{ element.point }}</h2>
+      <a [href]="element.link"o><h3 class="card-text">{{ element.title }}</h3></a>
       <h4 class="card-text" style="color:#5A5858;">{{ element.link }}</h4>
       <a href="#" class="btn btn-primary" (click)="onUpVote()">Upvote</a>
       <a href="#" class="btn btn-primary" (click)="onDownVote()">Downvote</a>

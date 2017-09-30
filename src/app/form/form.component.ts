@@ -6,9 +6,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Output() dataAdded = new EventEmitter<{title: string, link: string}>();
+  @Output() dataAdded = new EventEmitter<{title: string, link: string, point: number}>();
   newTitle = '';
   newLink = '';
+  newPoint = 0;
   constructor() { }
 
   ngOnInit() {
@@ -17,7 +18,8 @@ export class FormComponent implements OnInit {
   onSubmit() {
     this.dataAdded.emit({
       title: this.newTitle,
-      link: this.newLink
+      link: this.newLink,
+      point: this.newPoint
     });
   }
 

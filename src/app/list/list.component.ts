@@ -6,19 +6,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  points = 0;
-  @Input() element: {title: string, link: string};
+
+  @Input() element: {title: string, link: string, point: number};
   constructor() { }
 
   ngOnInit() {
   }
 
   onUpVote() {
-    this.points = this.points + 1;
+    this.element.point = this.element.point + 1;
   }
 
   onDownVote() {
-    this.points = this.points - 1;
+    this.element.point = this.element.point - 1;
+  }
+
+  externalLink() {
+    window.location.href = './' + this.element.link;
   }
 
 }
