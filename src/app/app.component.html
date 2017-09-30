@@ -1,0 +1,12 @@
+<div class="container">
+
+  <app-form (dataAdded)="onDataAdded($event)">
+  </app-form>
+
+  <hr>
+
+  <app-list
+     *ngFor="let dataElement of dataElements"
+     [element]="dataElement">
+  </app-list>
+</div>
