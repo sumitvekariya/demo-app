@@ -4,9 +4,15 @@
 
   <div class="card" style="width: 20rem;" *ngFor="let articles of article">
     <div class="card-block">
+<<<<<<< HEAD
       <h2 class="card-title">{{ articles.point }}</h2>
       <a [href]=""><h3 class="card-text">{{ articles.title }}</h3></a>
       <h4 class="card-text" style="color:#5A5858;">{{ articles.link }}</h4>
+=======
+      <h2 class="card-title">{{ element.point }}</h2>
+      <a [href]="element.link"><h3 class="card-text">{{ element.title }}</h3></a>
+      <h4 class="card-text" style="color:#5A5858;">{{ element.link }}</h4>
+>>>>>>> 8e62c0616ebd8150638d4eca33d03b3853a62c86
       <a href="#" class="btn btn-primary" (click)="onUpVote()">Upvote</a>
       <a href="#" class="btn btn-primary" (click)="onDownVote()">Downvote</a>
     </div>
