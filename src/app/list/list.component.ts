@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { strictEqual } from 'assert';
+import { Article } from '../article.model';
+import { ArticleService } from '../article.service';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,23 +9,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  @Input() element: {title: string, link: string, point: number};
-  constructor() { }
+  article: Article[];
+  // new Article {title: 'string', link: 'string', point: 'number'};
+ // @Input() element: {title: string, link: string, point: number};
+  constructor(private articleservice: ArticleService) {  }
 
   ngOnInit() {
+    this.article = this.articleservice.getArticles();
   }
 
-  onUpVote() {
-    this.element.point = this.element.point + 1;
-  }
 
-  onDownVote() {
-    this.element.point = this.element.point - 1;
-  }
 
-  externalLink() {
-    window.location.href = './' + this.element.link;
-  }
+
+
+
+  // externalLink() {
+  //   window.location.href = './' + this.element.link;
+  // }
 
 }

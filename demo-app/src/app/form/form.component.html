@@ -5,7 +5,7 @@
         type="text" 
         class="form-control" 
         placeholder="Enter Title"
-        #newTitle>
+        [(ngModel)]="newTitle">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Link</label>
@@ -13,7 +13,7 @@
         type="text" 
         class="form-control"  
         placeholder="Link"
-        #newLink>
+        [(ngModel)]="newLink">
     </div>
 
     <button class="btn btn-primary" (click)="onSubmit()">Submit</button>

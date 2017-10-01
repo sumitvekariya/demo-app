@@ -10,7 +10,6 @@ import { Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
-import { ArticleService } from './article.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,7 @@ import { ArticleService } from './article.service';
     HttpModule,
     FormsModule
   ],
-  providers: [ArticleService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

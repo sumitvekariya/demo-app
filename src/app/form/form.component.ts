@@ -1,4 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { ArticleService } from '../article.service';
+import { Article } from '../article.model';
 
 @Component({
   selector: 'app-form',
@@ -6,21 +9,23 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Output() dataAdded = new EventEmitter<{title: string, link: string, point: number}>();
-  newTitle = '';
-  newLink = '';
+
+  article: Article[];
+  @ViewChild('newTitle') titleInputRef: ElementRef;
+  @ViewChild('newLink') linkInputRef: ElementRef;
   newPoint = 0;
-  constructor() { }
+  constructor(private articleservice: ArticleService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.dataAdded.emit({
-      title: this.newTitle,
-      link: this.newLink,
-      point: this.newPoint
-    });
+    const ingTitle = this.titleInputRef.nativeElement.value;
+    const ingLink = this.linkInputRef.nativeElement.value;
+    const newArticle = new Article(ingTitle, ingLink, this.newPoint);
+    this.articleservice.addArticle(newArticle);
   }
+
+
 
 }
