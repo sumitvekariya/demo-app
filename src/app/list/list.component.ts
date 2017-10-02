@@ -10,6 +10,8 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 })
 export class ListComponent implements OnInit {
   article: Article[];
+
+  abc = 'point';
   // new Article {title: 'string', link: 'string', point: 'number'};
  // @Input() element: {title: string, link: string, point: number};
   constructor(private articleservice: ArticleService) {  }

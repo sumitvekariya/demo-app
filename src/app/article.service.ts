@@ -6,7 +6,7 @@ export class ArticleService {
 
   article: Article[] = [
     new Article('TypeScript', 'www.typescriptlang.org', 10),
-    new Article('TypeScript', 'www.typescriptlang.org', 10),
+    new Article('TypeScript', 'www.typescriptlang.org', 11),
     new Article('TypeScript', 'www.typescriptlang.org', 10),
     new Article('TypeScript', 'www.typescriptlang.org', 10)
   ];
