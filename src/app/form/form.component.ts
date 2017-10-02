@@ -1,5 +1,6 @@
+import { NgForm } from '@angular/forms/src/directives';
 
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../article.service';
 import { Article } from '../article.model';
 
@@ -11,18 +12,16 @@ import { Article } from '../article.model';
 export class FormComponent implements OnInit {
 
   article: Article[];
-  @ViewChild('newTitle') titleInputRef: ElementRef;
-  @ViewChild('newLink') linkInputRef: ElementRef;
+
   newPoint = 0;
   constructor(private articleservice: ArticleService) { }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    const ingTitle = this.titleInputRef.nativeElement.value;
-    const ingLink = this.linkInputRef.nativeElement.value;
-    const newArticle = new Article(ingTitle, ingLink, this.newPoint);
+  onAddItem(form: NgForm) {
+    const value = form.value;
+    const newArticle = new Article(value.title, value.link, this.newPoint);
     this.articleservice.addArticle(newArticle);
   }
 
