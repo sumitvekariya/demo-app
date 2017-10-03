@@ -12,12 +12,14 @@ import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { ArticleService } from './article.service';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    FormComponent
+    FormComponent,
+    SortPipe
 
   ],
   imports: [

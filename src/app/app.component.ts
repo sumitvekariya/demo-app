@@ -12,6 +12,7 @@ export class AppComponent {
 
 
 
+
   // onUpVote() {
   //   this.dataElements.point = this.dataElements.point + 1;
   // }

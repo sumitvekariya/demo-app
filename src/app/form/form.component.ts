@@ -10,9 +10,7 @@ import { Article } from '../article.model';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-
   article: Article[];
-
   newPoint = 0;
   constructor(private articleservice: ArticleService) { }
 
@@ -24,6 +22,7 @@ export class FormComponent implements OnInit {
     const newArticle = new Article(value.title, value.link, this.newPoint);
     this.articleservice.addArticle(newArticle);
   }
+
 
 
 

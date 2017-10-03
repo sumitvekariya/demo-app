@@ -9,13 +9,8 @@ export class Article {
         this.point = point;
     }
 
-    onUpVote() {
-       this.point = this.point + 1;
-    }
-
     // onDownVote() {
-    //     this.article.point = this.article.point - 1;
+    //     console.log(this.point);
     // }
-
 
 }
