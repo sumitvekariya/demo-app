@@ -1,0 +1,19 @@
+<div class="container">
+  <app-article-form>
+  </app-article-form>
+
+  <div class="card" style="width: 20rem;" *ngFor="let articles of article  | sort: '-point'">
+    <div class="row">
+      <div class="card-block">
+        <h2 class="card-title">{{ articles.point }} - Points</h2>
+        <a [href]="" class="link">
+          <h3 class="card-text">{{ articles.title }}</h3>
+        </a>
+        <h4 class="card-text" style="color:#5A5858;">{{ articles.link }}</h4>
+        <button class="btn btn-primary" (click)="onUpVote(articles)">Upvote</button>
+        <button class="btn btn-primary" (click)="onDownVote(articles)">Downvote</button>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
