@@ -1,5 +1,7 @@
 # DemoApp
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/033ffd87863c40769e21898bc41d124f)](https://app.codacy.com/app/sumitvekariya7/demo-app?utm_source=github.com&utm_medium=referral&utm_content=sumitvekariya/demo-app&utm_campaign=Badge_Grade_Settings)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ## Development server
